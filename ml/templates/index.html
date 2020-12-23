@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>
+            hello merin
+        </title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'new.css' %}">
+    </head>
+    <body>
+        <h1>Welcome to the world of machine learning </h1>
+        <h5>Here we are presenting titanic survey prediction hope you like it</h5>
+        <form method="GET" action="{% url 'result' %}">
+            {% csrf_token %}
+            <label>enter the pclass:
+            </label>
+            <input type="text" name="pclass">
+            <label>enter the sex:
+            </label>
+            <input type="text" name="sex">
+            <br>
+            <label>enter the age:
+            </label>
+            <input type="text" name="age">
+            <label>enter the sibsp:
+            </label>
+            <input type="text" name="sibsp">
+            <br>
+            <label>enter the parch:
+            </label>
+            <input type="text" name="parch">
+            <label>enter the fare:
+            </label>
+            <input type="text" name="fare">
+            <label>enter the embarked:
+            </label>
+            <input type="text" name="embarked">
+            <br>
+            <label>enter the title:
+            </label>
+            <input type="text" name="title">
+            <br>
+            <br>
+            <input type="submit" value="click me">
+
+           <img src="{% static 'download.jpg' %}">
+        </form>
+    </body>
+</html>
